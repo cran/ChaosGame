@@ -1,0 +1,9 @@
+exportPattern("^[[:alpha:]]+")
+import(ggplot2, gridExtra, rgl, sphereplot, plot3D, RColorBrewer, colorRamps)
+importFrom("graphics", "plot", "title")
+importFrom("grDevices", "gray", "rainbow")
+importFrom("graphics", "hist")
+importFrom("stats", "ecdf", "frequency")
+importFrom("utils", "tail")
+
+
