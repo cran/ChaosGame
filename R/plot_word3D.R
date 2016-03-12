@@ -1,5 +1,5 @@
-plot_hist3D <- 
-function(word = "copula", R = 20, plot.rgl = TRUE, copula = TRUE, portion = 0.2, color.rgl.plot = "magenta2green", plot.surface = "Sphere", histogram = TRUE, shift = 1.2, orbit = 3000, cex.label = 0.7, size.lines = 0.1){
+plot_word3D <- 
+function(word = "copula", R = 20, plot.rgl = TRUE, copula = TRUE, portion = 0.2, color.rgl.plot = "green2magenta", plot.surface = "Sphere", histogram = TRUE, shift = 1.2, orbit = 3000, cex.label = 0.7, size.lines = 0.1){
   
   A <- .chaos_game_word(word = word, R = R, shift = shift, orbit = orbit)
   
@@ -139,6 +139,7 @@ function(word = "copula", R = 20, plot.rgl = TRUE, copula = TRUE, portion = 0.2,
   }else{
     
     color <- ramp.col(c("chartreuse","green","darkolivegreen","magenta","deeppink4","darkmagenta")) 
+    #color <- ramp.col(c("darkmagenta","deeppink4","magenta","darkolivegreen","green","chartreuse")) 
     col_hist <- "darkslategray3" 
     col_lines <- "gray5"
     

@@ -37,6 +37,9 @@ function(word="fractal",shift=1.2,R=10,orbit=3000){
 
   return(A)
 }
+.green2magenta <- function(n){
+  ramp.col(col=c("chartreuse","green","darkolivegreen","magenta","deeppink4","darkmagenta"), n = n)
+}
 .colorfunction <-
 function(N, col="magenta2green"){
   if(col=="gray"){r <- gray(seq(0,(1.2*N))/(1.2*N))[1:N]}
@@ -45,6 +48,8 @@ function(N, col="magenta2green"){
   if(col=="blue2yellow"){r <- sapply("blue2yellow", do.call, list(N)) }
   if(col=="magenta2green"){r <- sapply("magenta2green", do.call, list(N)) }
   if(col=="ygobb"){r <- sapply("ygobb", do.call, list(N)) }
+  if(col=="green2magenta"){r <- sapply("ygobb", do.call, list(N))
+    r[,1] <- .green2magenta(N) }
   return(r)
 }
 .construct_IFS <-
@@ -70,7 +75,7 @@ function(word="fractal", shift=1.25){
   for(i in 1:length(IFSg)){
     v1<-(IFSg[[i]](x=1,y=0)-IFSg[[i]](x=0,y=0))
     v2<-(IFSg[[i]](x=0,y=1)-IFSg[[i]](x=0,y=0))
-    vol<-c(vol, det(cbind(v1,v2)))
+    vol<-c(vol, abs(det(cbind(v1,v2))))
   }
   
   Res<-list(IFS=IFSg,trans=trans,span=span,vol=vol)
@@ -247,11 +252,11 @@ structure(list(A = structure(list(f1 = function(x, y){
 }, f2 = function(x, y){
   c(1/2 * 1.042 * x - sqrt(3)/2 * 0.2 * y + 0.57, sqrt(3)/2 * 1.042 * x + 1/2 * 0.2 * y)
 }), .Names = c("f1", "f2")), W = structure(list(f1 = function(x, y){
-  c(2/3 * 0.98, 1) * c(-1/2 * 1.1 * x - sqrt(3)/2 * 0.2 * y + 0.61, sqrt(3)/2 * 1.1 * x - 1/2 * 0.2 * y + 0.08)
+  c(2/3 * 0.98, 0.95) * c(-1/2 * 1.1 * x - sqrt(3)/2 * 0.2 * y + 0.61, sqrt(3)/2 * 1.1 * x - 1/2 * 0.2 * y + 0.08)+c(0,0.02)
 }, f2 = function(x, y){
   c(2/3, 1) * c(1/2 * 1.1 * 1/2 * x - sqrt(3)/2 * 0.2 * y + 0.57, sqrt(3)/2 * 1.1 * 1/2 * x + 1/2 * 0.2 * y)
 }, f3 = function(x, y){
-  c(-1, 1) * c(2/3, 1) * c(-1/2 * 1.1 * x - sqrt(3)/2 * 0.2 * y + 0.61, sqrt(3)/2 * 1.1 * x - 1/2 * 0.2 * y + 0.08) + c(1, 0)
+  c(-1, 1) * c(2/3, 0.95) * c(-1/2 * 1.1 * x - sqrt(3)/2 * 0.2 * y + 0.61, sqrt(3)/2 * 1.1 * x - 1/2 * 0.2 * y + 0.08) + c(1, 0.02)
 }, f4 = function(x, y){
   c(-1, 1) * c(2/3, 1) * c(1/2 * 1.1 * 1/2 * x - sqrt(3)/2 * 0.2 * y + 0.57, sqrt(3)/2 * 1.1 * 1/2 * x + 1/2 * 0.2 * y) + c(1, 0)
 }), .Names = c("f1", "f2", "f3", "f4")), X = structure(list(f1 = function(x, y){
