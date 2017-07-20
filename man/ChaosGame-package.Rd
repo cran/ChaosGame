@@ -12,8 +12,8 @@ The main objective of the package is to enter a word of at least two letters bas
 \tabular{ll}{
 Package: \tab ChaosGame\cr
 Type: \tab Package\cr
-Version: \tab 0.2\cr
-Date: \tab 2016-03-11\cr
+Version: \tab 0.3\cr
+Date: \tab 2017-07-18\cr
 }
 
 }
@@ -28,7 +28,7 @@ Wolfgang Trutschnig \email{Wolfgang.Trutschnig@sbg.ac.at}
 # projects the result on the Enneper Minimal Surface:
 
 # for nice results use, for example, R = 20 and orbit = 3000
-A <- plot_word3D(word = "copula", R = 75, orbit = 300, copula = FALSE, 
+A <- plot_word3D(word = "copula", R = 50, orbit = 100, copula = FALSE, 
                  plot.surface = "EnneperMinimalSurface", histogram = FALSE)
             
 # further examples:

@@ -10,7 +10,8 @@ The function allows to enter a word of at least two letters based on which an It
 plot_word3D(word = "copula", R = 20, plot.rgl = TRUE, 
            copula = TRUE, portion = 0.2, color.rgl.plot = "green2magenta",
            plot.surface = "Sphere", histogram = TRUE, shift = 1.2, 
-           orbit = 3000, cex.label = 0.7, size.lines = 0.1)
+           orbit = 3000, cex.label = 0.7, size.lines = 0.1,
+           Theta = 40, Phi = 30, Box = TRUE, projection = TRUE)
 }
 \arguments{
   \item{word}{
@@ -35,7 +36,8 @@ Plotting color/color-range for the rgl-plot. One can choose between \code{"gray"
 Three-dimensional surface on which the two-dimensional fractal is projected. Options are \code{"Sphere"}, \code{"Helix"}, \code{"Torus"}, \code{"EnneperMinimalSurface"} and \code{"CatalanSurface"}. 
 }
   \item{histogram}{
-If \code{TRUE}, two-dimensional and one-dimensional marginal histograms are plotted.
+It is an option available only under the rgl-plot option (i.e if \code{plot.rgl = TRUE}).
+If \code{histogram = TRUE}, two-dimensional and one-dimensional marginal histograms are plotted in the rgl-plot.
 }
   \item{shift}{
 Distance between letters. 
@@ -49,6 +51,17 @@ Font size, for exporting as a pdf or png file (see examples).
   \item{size.lines}{
 Line width, for exporting as a pdf or png file (see examples).  
 }
+  \item{Theta, Phi}{
+Angles defining the viewing direction. \code{Theta} gives the azimuthal direction
+and \code{Phi} the colatitude in the scatter-plot (see Package plot3D). Can be chosen only under the scatter-plot option (i.e if \code{plot.rgl = FALSE}).
+}
+\item{Box}{
+If \code{TRUE}, axis, two-dimensional projections (if \code{projection = TRUE}) and marginal histograms are plotted.
+}
+\item{projection}{
+An option available only if \code{Box = TRUE}.
+If \code{projection = TRUE}, the two-dimensional projections are plotted together with axis and marginal histograms. 
+}
 }
 \author{
 Manuela Schreyer \email{manuelalarissa.schreyer@sbg.ac.at},\cr 
@@ -59,7 +72,7 @@ Wolfgang Trutschnig \email{Wolfgang.Trutschnig@sbg.ac.at}
 # copula transformation and projects the result on a sphere:
 
 # for nice results use, for example, R = 20 and orbit = 3000
-A <- plot_word3D(word = "copula", copula = FALSE, R = 75, orbit = 300)
+A <- plot_word3D(word = "copula", copula = FALSE, R = 50, orbit = 100)
 
 
 # further examples:

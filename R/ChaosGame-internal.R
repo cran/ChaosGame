@@ -82,7 +82,11 @@ function(word="fractal", shift=1.25){
   return(Res)
 }
 .LetterIFS <-
-structure(list(A = structure(list(f1 = function(x, y){
+structure(list(point = structure(list(f1 = function(x, y){
+  c(1/3 * x + 1/3, 1/8 * y)
+}), .Names = c("f1")), hyphen = structure(list(f1 = function(x, y){
+  c(x, 1/5 * y + 2/5)
+}), .Names = c("f1")), A = structure(list(f1 = function(x, y){
   c(x, 1/4 * y + 3/4)
 }, f2 = function(x, y){
   c(1/2 * x + 1/4, 1/4 * y + 1/4)
@@ -277,7 +281,7 @@ structure(list(A = structure(list(f1 = function(x, y){
   c(-(sqrt(2)/2 * (-sqrt(2) * (1 - 1/(4 * sqrt(2))) * x + 1/4 * y) + 1 - 1/(4 * sqrt(2))) + 1, sqrt(2)/2 * (sqrt(2) * (1 - 1/(4 * sqrt(2))) * x + 1/4 * y))
 }, f3 = function(x, y){
   c(-(0.57 * x + 1 - 0.57) + 1, -1/4 * y + 1/4 + 3/4)
-}), .Names = c("f1", "f2", "f3"))), .Names = c("A", "B", "C", 
+}), .Names = c("f1", "f2", "f3"))), .Names = c(".","-","A", "B", "C", 
 "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", 
 "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"))
 .plot_ball <-

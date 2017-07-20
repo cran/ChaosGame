@@ -1,8 +1,8 @@
-6aebd9ce4171eae554b39edcdf194dea *DESCRIPTION
+9cbd883b03fbc1084646542dffc1b250 *DESCRIPTION
 f44a1ed1fe07594664177d43c0c64267 *NAMESPACE
-4542b48ab67271b9fd70f19fc55647cf *R/ChaosGame-internal.R
+d4d247a6ba954ffcfad3ed8d8bf5b7b3 *R/ChaosGame-internal.R
 28342387099b3d955b2d168dc8079155 *R/plot_word.R
-e2579e656bccd221bf729c803cf3e96b *R/plot_word3D.R
-b57227fc0a6f882108bed4a0b83c1df7 *man/ChaosGame-package.Rd
-dff85bb0ed331fbc3f7be10952152ed4 *man/plot_word.Rd
-71aea350752f4e2a8e03178a0176ee05 *man/plot_word3D.Rd
+95a58b90aa8f009c052d95642f649674 *R/plot_word3D.R
+eb7b7c2c77aa079dda27cc2405be7824 *man/ChaosGame-package.Rd
+cf97c8b7f0dc6e47ef98fe3643d808a4 *man/plot_word.Rd
+cbe2afb52e1c73deaf6c27c0934f02b2 *man/plot_word3D.Rd
