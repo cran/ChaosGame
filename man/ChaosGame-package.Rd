@@ -12,8 +12,8 @@ The main objective of the package is to enter a word of at least two letters bas
 \tabular{ll}{
 Package: \tab ChaosGame\cr
 Type: \tab Package\cr
-Version: \tab 0.3\cr
-Date: \tab 2017-07-18\cr
+Version: \tab 0.4\cr
+Date: \tab 2018-12-13\cr
 }
 
 }
