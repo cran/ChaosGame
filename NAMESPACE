@@ -5,5 +5,3 @@ importFrom("grDevices", "gray", "rainbow")
 importFrom("graphics", "hist")
 importFrom("stats", "ecdf", "frequency")
 importFrom("utils", "tail")
-
-

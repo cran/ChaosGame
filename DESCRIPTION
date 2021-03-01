@@ -1,16 +1,24 @@
 Package: ChaosGame
 Type: Package
 Title: Chaos Game
-Version: 0.4
-Date: 2018-12-13
-Author: Manuela Schreyer <manuelalarissa.schreyer@sbg.ac.at>, 
-        Wolfgang Trutschnig <Wolfgang.Trutschnig@sbg.ac.at>
-Maintainer: Florian Griessenberger <florian.griessenberger@sbg.ac.at>
+Version: 1.0
+Authors@R: c(person("Florian", "Griessenberger", email = "florian.griessenberger@sbg.ac.at", role = c("aut", "cre")),
+             person("Manuela", "Schreyer", role = "aut"),
+             person("Johannes", "Bartel", role = "aut"),
+             person("Wolfgang", "Trutschnig", email = "Wolfgang.Trutschnig@sbg.ac.at", role = "aut"))
 Description: The main objective of the package is to enter a word of at least two letters based on which an Iterated Function System with Probabilities is constructed, and a two-dimensional fractal containing the chosen word infinitely often is generated via the Chaos Game. Additionally, the package allows to project the two-dimensional fractal on several three-dimensional surfaces and to transform the fractal into another fractal with uniform marginals.
-Imports: ggplot2, gridExtra, sphereplot, plot3D
-Depends: rgl, RColorBrewer, colorRamps
+Depends: R (>= 2.10), ggplot2
+Imports: gridExtra, sphereplot, plot3D, rgl, RColorBrewer, colorRamps
 License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2018-12-13 11:32:50 UTC; b1015748
+Packaged: 2021-03-01 14:18:52 UTC; Florian
+Author: Florian Griessenberger [aut, cre],
+  Manuela Schreyer [aut],
+  Johannes Bartel [aut],
+  Wolfgang Trutschnig [aut]
+Maintainer: Florian Griessenberger <florian.griessenberger@sbg.ac.at>
 Repository: CRAN
-Date/Publication: 2018-12-18 11:00:19 UTC
+Date/Publication: 2021-03-01 15:20:02 UTC
