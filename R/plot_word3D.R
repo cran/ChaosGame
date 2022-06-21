@@ -130,7 +130,8 @@ function(word = "copula", R = 20, plot.rgl = TRUE, copula = TRUE, portion = 0.2,
   ymax <- tail(hy$breaks, n=1) + diff(tail(hy$breaks, n=2))
   zmax <- tail(hz$breaks, n=1) + diff(tail(hz$breaks, n=2))
 
-  dd <- 0.75
+  #dd <- 0.75
+  dd <- 1
   col_lines <- "gray5"
 
 
@@ -142,11 +143,13 @@ function(word = "copula", R = 20, plot.rgl = TRUE, copula = TRUE, portion = 0.2,
 
     col_hist <- "gray90"
 
-    od<-order(surface$z)
-    df_sph_coord<-car2sph(surface$x[od], surface$y[od], surface$z[od], deg = FALSE)
+    #od<-order(surface$z)
+    #df_sph_coord<-car2sph(surface$x[od], surface$y[od], surface$z[od], deg = FALSE)
     deg = 15
     open3d()
-    rgl.sphpoints(df_sph_coord, deg=FALSE, col=.colorfunction(length(surface$z), col = color.rgl.plot), size=0.1)
+    surface <- surface[order(surface$z),]
+    points3d(surface$x, surface$y, surface$z, size = 0.1, col = .colorfunction(length(surface$z), col = color.rgl.plot))
+    #rgl.sphpoints(df_sph_coord, deg=FALSE, col=ChaosGame:::.colorfunction(length(surface$z), col = color.rgl.plot), size=0.1)
 
     if(Box){
       if(histogram){

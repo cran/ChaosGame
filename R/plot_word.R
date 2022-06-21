@@ -63,7 +63,7 @@ function(word = "copula", R = 20, phi = 0, copula = FALSE, portion = 0.2, shift 
   p2 <- ggplot(data=B1,aes(x=x,y=y))
   p2 <- p2 + stat_bin2d(binwidth = c(0.0025,0.0025),colour=NA,size=0.01)
   p2 <- p2 + theme_bw()
-  p2 <- p2 + scale_fill_gradientn(colours=farbe,name="count", guide = FALSE)
+  p2 <- p2 + scale_fill_gradientn(colours=farbe,name="count", guide = "none")
 
   p3 <- ggplot(B1, aes(x=x,y=y))
   p3 <- p3 + geom_point(colour="gray30",size=0.05)
