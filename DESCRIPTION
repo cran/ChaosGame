@@ -1,12 +1,31 @@
 Package: ChaosGame
 Type: Package
 Title: Chaos Game
-Version: 1.4
-Author: Thimo Kasper <thimo.kasper@plus.ac.at>, 
-	Florian Griessenberger <florian.griessenberger@plus.ac.at>,
-	Manuela Schreyer <manuelalarissa.schreyer@sbg.ac.at>,
-	Johannes Bartel <>,
-        Wolfgang Trutschnig <Wolfgang.Trutschnig@sbg.ac.at>
+Version: 1.5
+Authors@R: 
+	c(person(given = "Lea",
+	     family = "Maislinger", 
+	     role = c("aut", "cre"),
+	     email = "lea.maislinger@plus.ac.at"),
+	  person(given = "Thimo",
+	     family = "Kasper", 
+	     role = "aut",
+	     email = "thimo.kasper@plus.ac.at"),
+	  person(given = "Florian", 
+             family = "Griessenberger", 
+             role = "aut",
+	     email = "florian.griessenberger@plus.ac.at"),
+	  person(given = "Manuela ", 
+             family = "Schreyer ", 
+             role = "aut",
+	     email = "manuelalarissa.schreyer@sbg.ac.at"),
+	  person(given = "Johannes", 
+             family = "Bartel", 
+             role = "aut"),
+          person(given = "Wolfgang", 
+             family = "Trutschnig", 
+             role = "aut",
+	     email = "wolfgang.trutschnig@plus.ac.at"))
 Description: The main objective of the package is to enter a word of at least two letters based on which an Iterated Function System with Probabilities is constructed, and a two-dimensional fractal containing the chosen word infinitely often is generated via the Chaos Game. Additionally, the package allows to project the two-dimensional fractal on several three-dimensional surfaces and to transform the fractal into another fractal with uniform marginals.
 Depends: R (>= 2.10), rgl, colorRamps
 Imports: ggplot2, gridExtra, plot3D, RColorBrewer,
@@ -14,7 +33,13 @@ License: GPL-2
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2022-12-09 15:45:12 UTC; EXT99500
-Maintainer: Marco Tschimpke <marco.tschimpke@plus.ac.at>
+Packaged: 2025-07-05 16:39:17 UTC; b1082470
+Maintainer: Lea Maislinger <lea.maislinger@plus.ac.at>
 Repository: CRAN
-Date/Publication: 2022-12-09 16:50:02 UTC
+Date/Publication: 2025-07-05 23:00:11 UTC
+Author: Lea Maislinger [aut, cre],
+  Thimo Kasper [aut],
+  Florian Griessenberger [aut],
+  Manuela Schreyer [aut],
+  Johannes Bartel [aut],
+  Wolfgang Trutschnig [aut]
